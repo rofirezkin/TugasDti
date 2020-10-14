@@ -1,24 +1,22 @@
 import React from "react";
-import propTypes from "prop-types";
 
-function desExpertise(props) {
+function DesExpertise(props) {
+  const { data } = props;
+  const { title, number, description } = data;
+
   return (
     <div className="col-sm-6 ">
       <div className="row">
         <div class="col-1">
-          <h5 class="number-expertise">{props.data.number}</h5>
+          <h5 class="number-expertise">{number}</h5>
         </div>
         <div class="col-10">
-          <h5>{props.data.title}</h5>
-          <p>{props.data.description}</p>
+          <h5>{title}</h5>
+          <p>{description}</p>
         </div>
       </div>
     </div>
   );
 }
 
-desExpertise.propTypes = {
-  data: propTypes.object,
-};
-
-export default desExpertise;
+export default DesExpertise;

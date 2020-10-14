@@ -103,14 +103,13 @@ function homepage() {
           </div>
           <div className="col-sm-8 desc-expertise">
             <div className="row ">
-              {isiHalaman.filter((sortir, index) => {
-                if (index < 4) {
-                  return (
-                    <DesExpertise key={index} data={sortir}></DesExpertise>
-                  );
-                }
-          
-              })}
+              {isiHalaman
+                .filter((data, index) => {
+                  if (index < 4) return data;
+                })
+                .map((data) => {
+                  return <DesExpertise key={data.number} data={data} />;
+                })}
             </div>
           </div>
         </div>
@@ -126,10 +125,12 @@ function homepage() {
             <div className="col-sm-8 desc-expertise">
               <div className="row">
                 {isiHalaman
-                  .filter((sortir, index) => index > 4)
-                  .map((sortir, index) => (
-                    <Skill key={index} data={sortir}></Skill>
-                  ))}
+                  .filter((data, index) => {
+                    if (index >= 4) return data;
+                  })
+                  .map((data) => {
+                    return <Skill key={data.title} data={data} />;
+                  })}
               </div>
             </div>
           </div>
