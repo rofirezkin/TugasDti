@@ -78,9 +78,9 @@ function homepage() {
         <div className="row justify-content-end">
           <div className="col-8 line-bar ">
             <div className="row justify-content-center mt-3">
-              {lists.map((list, index) => (
-                <Lists key={index} data={list}></Lists>
-              ))}
+              {lists.map((list) => {
+                return <Lists key={list} data={list} />;
+              })}
             </div>
           </div>
         </div>
@@ -107,12 +107,7 @@ function homepage() {
             <div className="row ">
               {isiHalaman.filter((sortir, index) => {
                 if (index < 4) {
-                  return (
-                    <DesExpertise
-                      key={sortir.number}
-                      data={sortir.title}
-                    ></DesExpertise>
-                  );
+                  return <DesExpertise key={sortir} data={sortir} />;
                 }
               })}
             </div>
@@ -130,14 +125,16 @@ function homepage() {
             <div className="col-sm-8 desc-expertise">
               <div className="row">
                 {isiHalaman
-                  .filter((sortir, index) => index > 4)
-                  .map((sortir, index) => (
-                    <Skill key={index} data={sortir}></Skill>
-                  ))}
+                  .filter((sortir, index) => {
+                    return index > 4;
+                  })
+                  .map((sortir) => {
+                    return <Skill key={sortir} data={sortir} />;
+                  })}
               </div>
             </div>
           </div>
-          <div className="margin-bawah"></div>
+          <div className="margin-bawah" />
         </div>
       </div>
     </div>
