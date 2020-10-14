@@ -28,7 +28,7 @@
 }
 
 .sub-margin {
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 .margin-expertise {
@@ -42,7 +42,12 @@
 .desc-expertise {
   border-left: #EA4C2B solid 4px;
   background-color: rgb(243, 239, 239);
-  padding: 30px 10px;
+  padding: 30px ;
+}
+
+.desc-expertise:hover {
+  background-color: #e0cfcb;
+  box-shadow: 0 6px 13px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .line-bar {
