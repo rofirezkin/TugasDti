@@ -2,7 +2,7 @@ import React from 'react';
 
 function education() {
   return (
-    <div>
+    <div className="row">
       <div className="col-sm-6 ">
         <h5 className="mb-4">FORMAL</h5>
         <p className="number-expertise">

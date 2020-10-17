@@ -6,4 +6,4 @@ export { default as Description } from './description';
 export { default as Skill } from './Skill';
 export { default as Header } from './header';
 export { default as Portofolio } from './portofolio';
-export { default as Pengalaman } from './pengalaman';
+export { default as Referensi } from './referensi';

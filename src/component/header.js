@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-  const listMenu = ['curriculum vitae', 'portofolio', 'pengalaman'];
+  const listMenu = ['curriculum vitae', 'portofolio', 'Referensi Pemograman'];
 
   return (
     <div className="header">

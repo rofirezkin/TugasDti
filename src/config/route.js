@@ -1,4 +1,4 @@
-import { Pengalaman, Portofolio } from '../component';
+import { Referensi, Portofolio } from '../component';
 import Homepage from '../scenes/homepage';
 
 const routes = [
@@ -7,8 +7,8 @@ const routes = [
     component: Portofolio,
   },
   {
-    path: '/pengalaman',
-    component: Pengalaman,
+    path: '/Referensi Pemograman',
+    component: Referensi,
   },
   {
     path: '/',
