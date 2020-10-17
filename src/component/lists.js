@@ -1,18 +1,13 @@
-import React from "react";
-import propTypes from "prop-types";
+import React from 'react';
 
 function lists(props) {
+  const { title, description } = props.data;
   return (
     <div className="col-sm-3">
-
-              <h6>{props.data.title}</h6>
-              <div>{props.data.description}</div>
-          
+      <h6>{title}</h6>
+      <div>{description}</div>
     </div>
   );
 }
 
-lists.propTypes = {
-  data: propTypes.object,
-};
 export default lists;

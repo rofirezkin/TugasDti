@@ -1,23 +1,23 @@
-import React from "react";
-import propTypes from "prop-types";
+import React from 'react';
 
 function Skill(props) {
-  
-   
+  const { presentation, title } = props.data;
   return (
-    <div class="col-sm-6 mt-4">
+    <div className="col-sm-6 mt-4">
       <h5>
-        <span class="text-danger">{props.data.presentation}</span> {props.data.title}
+        <span className="text-danger">{presentation}</span>
+        {title}
       </h5>
-      <div class="progress">
-              <div class="progress-bar bg-danger " style={{ width: props.data.presentation }}>{props.data.presentation}</div>
+      <div className="progress">
+        <div
+          className="progress-bar bg-danger "
+          style={{ width: presentation }}
+        >
+          {presentation}
+        </div>
       </div>
     </div>
   );
 }
-
-Skill.propTypes = {
-  data: propTypes.object,
-};
 
 export default Skill;

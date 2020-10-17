@@ -1,3 +1,18 @@
+
+.header{
+  background-color: #e67a62;
+}
+.menu{
+  display:inline-block;
+  padding: 20px;
+  color: white;
+}
+.menu:hover{
+background-color: white;
+color: green;
+}
+
+
 .text-name-big {
   font-size: 50px;
   font-weight: 500;

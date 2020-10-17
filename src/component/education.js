@@ -1,9 +1,8 @@
-import React from "react";
-import propTypes from "prop-types";
+import React from 'react';
 
-function education(props) {
+function education() {
   return (
-    <div className="row">
+    <div>
       <div className="col-sm-6 ">
         <h5 className="mb-4">FORMAL</h5>
         <p className="number-expertise">
@@ -16,7 +15,7 @@ function education(props) {
       <div className="col-sm-6 ">
         <h5 className="mb-4">NON-FORMAL</h5>
         <p className="number-expertise">
-          <b >KURSUS NURUL FIKRI</b>
+          <b>KURSUS NURUL FIKRI</b>
         </p>
         <p className="number-expertise">
           <b> COURSERA</b>
@@ -25,9 +24,5 @@ function education(props) {
     </div>
   );
 }
-
-education.propTypes = {
-  data: propTypes.object,
-};
 
 export default education;

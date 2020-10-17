@@ -1,4 +1,6 @@
 import React from 'react';
+import profil from '../assets/images/formal.jpg';
+
 import {
   Description,
   DesExpertise,
@@ -11,18 +13,22 @@ import {
 function homepage() {
   const lists = [
     {
+      number: 1,
       title: 'Location',
       description: 'Banten',
     },
     {
+      number: 2,
       title: 'Phone',
       description: '085771813299',
     },
     {
+      number: 3,
       title: 'Github',
       description: 'rofirezkin',
     },
     {
+      number: 4,
       title: 'Email',
       description: 'rofirezkin@gmail.com',
     },
@@ -73,13 +79,13 @@ function homepage() {
 
   return (
     <div>
-      <Profile />
+      <Profile profil={profil} />
       <div className="container">
         <div className="row justify-content-end">
           <div className="col-8 line-bar ">
             <div className="row justify-content-center mt-3">
               {lists.map((list) => {
-                return <Lists key={list} data={list} />;
+                return <Lists key={list.number} data={list} />;
               })}
             </div>
           </div>
@@ -105,11 +111,13 @@ function homepage() {
           </div>
           <div className="col-sm-8 desc-expertise">
             <div className="row ">
-              {isiHalaman.filter((sortir, index) => {
-                if (index < 4) {
-                  return <DesExpertise key={sortir} data={sortir} />;
-                }
-              })}
+              {isiHalaman
+                .filter((data, index) => {
+                  return index < 4;
+                })
+                .map((data) => {
+                  return <DesExpertise key={data.number} data={data} />;
+                })}
             </div>
           </div>
         </div>
@@ -125,11 +133,11 @@ function homepage() {
             <div className="col-sm-8 desc-expertise">
               <div className="row">
                 {isiHalaman
-                  .filter((sortir, index) => {
-                    return index > 4;
+                  .filter((data, index) => {
+                    return index > 3;
                   })
-                  .map((sortir) => {
-                    return <Skill key={sortir} data={sortir} />;
+                  .map((data) => {
+                    return <Skill key={data} data={data} />;
                   })}
               </div>
             </div>

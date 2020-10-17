@@ -45,5 +45,6 @@
     "template-curly-spacing": "off",
     "indent": "off",
     "import/no-cycle": [0]
+
   }
 }
