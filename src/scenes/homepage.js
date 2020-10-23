@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { LagiNgoding, FotoPantai } from '../assets/images';
 
+import { isiList } from '../App';
 import JSONDataKeseluruhan from '../assets/dummy';
-
 import {
   Description,
   DesExpertise,
@@ -11,19 +12,26 @@ import {
   Content,
 } from '../component';
 
-function homepage() {
+function Homepage() {
+  const isiBar = useContext(isiList);
   const JSONData = JSONDataKeseluruhan.JSONDataKeseluruhan;
-
+  const imgSrc = LagiNgoding;
+  const imgProf = FotoPantai;
   return (
     <div>
-      <div>
-        <Content />
-      </div>
+      <Content
+        imgSrc={imgSrc}
+        title="Welcome To My Personal Website"
+        imgProf={imgProf}
+        name="Rofi Rezkin"
+        subKategori="Student | Developer | Learner"
+      />
+
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-8 line-bar ">
             <div className="row justify-content-center mt-3">
-              {JSONData.lists.map((list) => {
+              {isiBar.lists.map((list) => {
                 return <Lists key={list.number} data={list} />;
               })}
             </div>
@@ -88,4 +96,4 @@ function homepage() {
   );
 }
 
-export default homepage;
+export default Homepage;

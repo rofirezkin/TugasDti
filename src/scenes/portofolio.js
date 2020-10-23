@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   Tandon,
   Doctor,
   Museum,
   Web,
-  ImgVector,
-  ImgVector2,
+  Leptop,
+  fotoPortofolio,
 } from '../assets/images';
-import { MyProject, Profile } from '../component';
+import { MyProject, Content } from '../component';
 
 function Portofolio() {
-  const imgSrc = ImgVector;
+  const imgSrc = Leptop;
   const listMyProject = [
     {
       foto: Tandon,
@@ -48,7 +48,13 @@ function Portofolio() {
 
   return (
     <div>
-      <Profile imgSrc={imgSrc} title="MY PORTOFOLIO" />
+      <Content
+        imgSrc={imgSrc}
+        title="MY PORTOFOLIO"
+        imgProf={fotoPortofolio}
+        subKategori="UI/UX | Web | Android"
+      />
+
       <div className="line-bar text-center ">
         <h3 className="sub-margin">This My Project</h3>
       </div>

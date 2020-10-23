@@ -6,4 +6,6 @@ export { default as Web } from './web.PNG';
 export { default as FotoFormal } from './formal.jpg';
 export { default as ImgVector2 } from './undraw_Taking_notes_re_bnaf.png';
 export { default as FotoPantai } from './sendiri.jpeg';
-export { default as LagiNgoding } from './orang lagi ngoding.jpg';
+export { default as LagiNgoding } from './lgingoding.jpg';
+export { default as Leptop } from './leptop.jpg';
+export { default as fotoPortofolio } from './portofolio.jpg';
