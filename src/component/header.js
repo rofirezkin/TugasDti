@@ -5,7 +5,7 @@ const Header = () => {
   const listMenu = ['curriculum vitae', 'portofolio', 'Referensi Pemograman'];
 
   return (
-    <div className="header">
+    <div className="header text-center">
       {listMenu.map((name) => {
         return (
           <Link to={`/${name}`} key={name}>

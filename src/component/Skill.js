@@ -1,19 +1,18 @@
 import React from 'react';
 
-function Skill(props) {
-  const { presentation, title } = props.data;
+function Skill({ data }) {
   return (
     <div className="col-sm-6 mt-4">
       <h5>
-        <span className="text-danger">{presentation}</span>
-        {title}
+        <span className="text-danger">{data.presentation}</span>
+        {data.title}
       </h5>
       <div className="progress">
         <div
           className="progress-bar bg-danger "
-          style={{ width: presentation }}
+          style={{ width: data.presentation }}
         >
-          {presentation}
+          {data.presentation}
         </div>
       </div>
     </div>

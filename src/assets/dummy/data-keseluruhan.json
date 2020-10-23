@@ -1,0 +1,76 @@
+ {
+  "lists" : [ {
+      "number": 1,
+      "title": "Location",
+      "description": "Banten"
+    },
+    {
+      "number": 2,
+      "title": "Phone",
+      "description": "085771813299"
+    },
+    {
+      "number": 3,
+      "title": "Githu",
+      "description": "rofirezkin"
+    },
+    {
+      "number": 4,
+      "title": "Email",
+      "description": "rofirezkin@gmail.com"
+    }
+  ],
+
+  "isiHalaman" : [ {
+    "number": "01",
+    "title": "CSS BEGINNER",
+   "description":
+      "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML."
+  },
+  {
+    "number": "02",
+    "title": "FRONT-END DESIGN",
+   "description":
+      "Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly"
+  },
+
+  {
+    "number": "03",
+    "title": "REACT JS LIBRARY",
+   "description":
+      "React JS is a JavaScript library used in web development to build interactive elements on websites."
+  },
+  {
+    "number": "04",
+    "title": "REACT NATIVE",
+   "description":
+      "React Native is a JavaScript framework for writing real, natively rendering mobile applications for iOS and Android."
+  },
+  {
+    "presentation": "60%",
+    "title": "FIGMA"
+  },
+  {
+    "presentation": "70%",
+    "title": "CST STUDIO 2020"
+  },
+  {
+    "presentation": "60%",
+    "title": "NETWORK ANALYZER"
+  },
+  {
+    "presentation": "70%",
+    "title": "ADOBE XD"
+  }
+]
+
+
+ }
+
+
+
+
+
+
+
+

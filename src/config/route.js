@@ -1,5 +1,4 @@
-import { Referensi, Portofolio } from '../component';
-import Homepage from '../scenes/homepage';
+import { Referensi, Portofolio, Homepage } from '../scenes';
 
 const routes = [
   {

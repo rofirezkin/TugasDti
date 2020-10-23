@@ -1,6 +1,10 @@
 
 .header{
-  background-color: #e67a62;
+  background-color: #1d3136;
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  z-index: 1;
 }
 .menu{
   display:inline-block;
@@ -12,12 +16,16 @@ background-color: white;
 color: green;
 }
 
+.padding-profile{
+  background-color: #c5d8dd;
+  padding-top : 100px;
 
+}
 .text-name-big {
   font-size: 50px;
   font-weight: 500;
   letter-spacing: 3px;
-  color: #EA4C2B;
+  color: #1d3136;
 
 
 }
@@ -28,7 +36,7 @@ color: green;
 
 .text-name-small {
   font-size: 30px;
-  color: #E5B4A9;
+  color: #e7927f;
 }
 
 .margin-left {
@@ -51,17 +59,17 @@ color: green;
 }
 
 .number-expertise {
-  color: #EA4C2B;
+  color:#1d3136;
 }
 
 .desc-expertise {
-  border-left: #EA4C2B solid 4px;
+  border-left: #1d3136 solid 4px;
   background-color: rgb(243, 239, 239);
   padding: 30px ;
 }
 
 .desc-expertise:hover {
-  background-color: #e0cfcb;
+  background-color:#cbdce0;
   box-shadow: 0 6px 13px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -72,4 +80,25 @@ color: green;
 
 .margin-bawah{
   min-height: 200px;
+}
+.padding-content {
+  padding: 100px 0px;
+  margin-top: 50px;
+}
+
+.jumbotron{
+  background-image: url(./assets/images/orang\ lagi\ ngoding.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.judul-nama{
+  color: aliceblue;
+}
+.judul-content{
+  color: white;
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+.sub-judul-content{
+  color: white;
 }
