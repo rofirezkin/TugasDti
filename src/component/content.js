@@ -17,7 +17,7 @@ function Content({ imgSrc, title, imgProf, name, subKategori }) {
         judul: quotes[1],
         nama: quotes[3],
       });
-    }, 10000);
+    }, 1000);
   });
 
   return (
