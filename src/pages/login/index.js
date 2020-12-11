@@ -13,6 +13,7 @@ const Login = () => {
     authService
       .login(username, password)
       .then((res) => {
+        console.log(res);
         const cookieToken = res.data.token;
         const cookieUser = res.data.user;
         setCookie('userData', JSON.stringify(cookieUser), 10000);
