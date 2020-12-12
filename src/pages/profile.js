@@ -3,19 +3,16 @@ import { userService } from '../services';
 import { getCookie } from '../utils/cookie';
 
 const Profile = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
   const [userDataLoading, setUserDataLoading] = useState(false);
 
-  const userId = JSON.parse(getCookie('userData')).id;
+  const userId = JSON.parse(getCookie('userData')).username;
 
   useEffect(() => {
     setUserDataLoading(true);
     userService
-      .getUserById(userId)
+      .getProduct()
       .then((res) => {
-        setName(res.data.name);
-        setEmail(res.data.email);
+        console.log('dasta', res);
       })
       .catch((err) => {
         return console.log(err);
@@ -23,7 +20,7 @@ const Profile = () => {
       .finally(() => {
         setUserDataLoading(false);
       });
-  }, [userId]);
+  }, []);
 
   return (
     <div>
@@ -31,9 +28,8 @@ const Profile = () => {
       {userDataLoading ? (
         <span>Loading...</span>
       ) : (
-        <div>
-          <p>{`name : ${name}`}</p>
-          <p>{`email : ${email}`}</p>
+        <div className="container">
+          <p>{`name : ${userId}`}</p>
         </div>
       )}
     </div>

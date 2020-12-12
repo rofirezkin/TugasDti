@@ -1,7 +1,7 @@
 import {
   Home,
   Profile,
-  Contact,
+  Product,
   Login,
   ProfileId,
   InfoCorona,
@@ -20,8 +20,8 @@ const routes = [
     isPublic: false,
   },
   {
-    path: '/contact',
-    component: Contact,
+    path: '/product',
+    component: Product,
     isPublic: true,
   },
   {

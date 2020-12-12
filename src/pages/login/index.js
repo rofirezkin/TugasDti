@@ -14,8 +14,8 @@ const Login = () => {
       .login(username, password)
       .then((res) => {
         console.log(res);
-        const cookieToken = res.data.token;
-        const cookieUser = res.data.user;
+        const cookieToken = res.token;
+        const cookieUser = res;
         setCookie('userData', JSON.stringify(cookieUser), 10000);
         setCookie('token', JSON.stringify(cookieToken), 10000);
       })
@@ -29,36 +29,51 @@ const Login = () => {
 
   return (
     <div className="loginPage">
-      <h2> Login Page</h2>
-      <form
-        className="login_form"
-        onSubmit={(e) => {
-          e.preventDefault();
-          onSubmitLogin();
-        }}
-      >
-        <label htmlFor="username">
-          Username :
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => {
-              setUsername(e.target.value);
-            }}
-          />
-        </label>
-        <label htmlFor="password">
-          Password :
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-          />
-        </label>
-        <input type="submit" value="Submit" disabled={isLoginLoading} />
-      </form>
+      <div className="container my-5">
+        <div className="row justify-content-md-center">
+          <div className="col-sm-6">
+            <div className="login px-3">
+              <h1>halaman login</h1>
+              <form
+                className="login_form"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  onSubmitLogin();
+                }}
+              >
+                <div className="form-group">
+                  Username :
+                  <input
+                    className="form-control"
+                    type="text"
+                    value={username}
+                    onChange={(e) => {
+                      setUsername(e.target.value);
+                    }}
+                  />
+                </div>
+                Password :
+                <input
+                  className="form-control"
+                  type="password"
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                />
+                <div>
+                  <input
+                    className="my-2 text-center"
+                    type="submit"
+                    value="Submit"
+                    disabled={isLoginLoading}
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

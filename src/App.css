@@ -30,3 +30,10 @@
   display: block;
   margin-bottom: 10px;
 }
+.login{
+  background-color: antiquewhite;
+}
+.content{
+  background-color:beige;
+  border-radius: 5%;
+}

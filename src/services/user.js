@@ -1,8 +1,7 @@
 import BaseService from './baseService';
 import API from '../config/rest';
 
-const getUserById = (userId) => {
-  return BaseService.get(API.USERBYID(userId));
+const getProduct = (username) => {
+  return BaseService.get(API.PRODUCT, { username });
 };
-
-export default { getUserById };
+export default { getProduct };
