@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { userService, productSearch } from '../services';
+import { getProducts } from '../services';
 
 import { kinderjoy } from '../assets';
 
@@ -16,45 +16,8 @@ const Product = () => {
 
   useEffect(() => {
     setUserDataLoading(true);
-    userService
-      .getProduct()
-      .then((res) => {
-        console.log('daata', res);
-        setBrand(res.data.brand.name);
-        setName(res.data.name);
-        setKategori(res.data.categories);
-        setDeskripsi(res.data.description);
-        setNormalPrice(res.data.display_normal_price);
-        setPromo(res.data.display_price);
-        setPersen(res.data.display_promo_price_percentage);
-      })
-      .catch((err) => {
-        return console.log(err);
-      })
-      .finally(() => {
-        setUserDataLoading(false);
-      });
-  }, []);
-
-  useEffect(() => {
-    setUserDataLoading(true);
-    productSearch
-      .getProductSearch()
-      .then((res) => {
-        console.log('daata', res);
-      })
-      .catch((err) => {
-        return console.log(err);
-      })
-      .finally(() => {
-        setUserDataLoading(false);
-      });
-  }, []);
-
-  useEffect(() => {
-    setUserDataLoading(true);
-    userService
-      .getProduct()
+    getProducts
+      .getProductById()
       .then((res) => {
         console.log('daata', res);
         setBrand(res.data.brand.name);

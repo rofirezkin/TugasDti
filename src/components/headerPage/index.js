@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { isUserAuthenticated } from '../../utils/cookie';
 
 const Header = () => {
-  const listMenu = ['home', 'profile', 'product', 'infoCorona'];
+  const listMenu = ['Dashboard Product', 'profile', 'product', 'infoCorona'];
   return (
     <div className="header">
       {listMenu.map((name) => {

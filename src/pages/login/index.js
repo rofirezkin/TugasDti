@@ -23,17 +23,18 @@ const Login = () => {
         console.log(err);
       })
       .finally(() => {
+        window.location.replace('/');
         setLoginLoading(false);
       });
   };
 
   return (
     <div className="loginPage">
-      <div className="container my-5">
+      <div className="constainer my-5">
         <div className="row justify-content-md-center">
-          <div className="col-sm-6">
+          <div className="col-sm-4">
             <div className="login px-3">
-              <h1>halaman login</h1>
+              <h1 className="text-center">halaman login</h1>
               <form
                 className="login_form"
                 onSubmit={(e) => {
@@ -41,17 +42,15 @@ const Login = () => {
                   onSubmitLogin();
                 }}
               >
-                <div className="form-group">
-                  Username :
-                  <input
-                    className="form-control"
-                    type="text"
-                    value={username}
-                    onChange={(e) => {
-                      setUsername(e.target.value);
-                    }}
-                  />
-                </div>
+                Username :
+                <input
+                  className="form-control"
+                  type="text"
+                  value={username}
+                  onChange={(e) => {
+                    setUsername(e.target.value);
+                  }}
+                />
                 Password :
                 <input
                   className="form-control"
@@ -61,14 +60,12 @@ const Login = () => {
                     setPassword(e.target.value);
                   }}
                 />
-                <div>
-                  <input
-                    className="my-2 text-center"
-                    type="submit"
-                    value="Submit"
-                    disabled={isLoginLoading}
-                  />
-                </div>
+                <input
+                  className="my-3 "
+                  type="submit"
+                  value="Submit"
+                  disabled={isLoginLoading}
+                />
               </form>
             </div>
           </div>
@@ -79,16 +76,3 @@ const Login = () => {
 };
 
 export default Login;
-
-// Login
-
-// form => post ke server => waiting for response (loading state) =>
-// receive response from server => success -> success statement to user
-//                              => error -> error statement to user  -> next ngapain user?
-
-// if success - get token from be - save Token to cookie -> redirect ??
-
-// Loading state treatment
-// race condition -> unstable connection
-
-// Action A -> Response A  ->  Action B ->  Response B -> success

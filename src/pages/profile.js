@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { userService } from '../services';
+import { authService } from '../services';
 import { getCookie } from '../utils/cookie';
 
 const Profile = () => {
@@ -9,8 +9,8 @@ const Profile = () => {
 
   useEffect(() => {
     setUserDataLoading(true);
-    userService
-      .getProduct()
+    authService
+      .login()
       .then((res) => {
         console.log('dasta', res);
       })

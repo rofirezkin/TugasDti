@@ -3,15 +3,15 @@ import {
   Profile,
   Product,
   Login,
-  ProfileId,
+  Cards,
   InfoCorona,
   DetailDate,
 } from '../pages';
 
 const routes = [
   {
-    path: '/profile/:profileId',
-    component: ProfileId,
+    path: '/profile/:Cards',
+    component: Cards,
     isPublic: false,
   },
   {
